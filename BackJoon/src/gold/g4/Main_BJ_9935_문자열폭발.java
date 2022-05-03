@@ -18,7 +18,7 @@ public class Main_BJ_9935_문자열폭발 {
         String target = br.readLine();
 
         System.out.println(solution1(input, target));
-        System.out.println(solution2(input, target));
+//        System.out.println(solution2(input, target));
     }
 
     private static String solution1(String input, String target) {
