@@ -10,8 +10,8 @@ import java.util.Stack;
 /**
  * Study
  * 
- * @author jhno96
- * @date 2022. 4. 26.
+ * @Author jhno96
+ * @Date 2022. 4. 26.
  */
 public class Main_BJ_17413_단어뒤집기2 {
 

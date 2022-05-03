@@ -10,8 +10,8 @@ import java.util.StringTokenizer;
 
 /**
  * Study
- * @author : Home
- * @date : 2022-04-28
+ * @Author : Home
+ * @Date : 2022-04-28
  */
 public class Main_BJ_21610_마법사상어와비바라기 {
 

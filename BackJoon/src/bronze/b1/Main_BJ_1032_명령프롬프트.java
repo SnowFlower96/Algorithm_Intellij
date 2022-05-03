@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author : jhno96
- * @date : 2022-04-29
+ * @Author : jhno96
+ * @Date : 2022-04-29
  */
 public class Main_BJ_1032_명령프롬프트 {
 

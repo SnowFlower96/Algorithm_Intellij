@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author : jhno96
- * @date : 2022-05-01
+ * @Author : jhno96
+ * @Date : 2022-05-01
  */
 public class Main_BJ_1075_나누기 {
 
