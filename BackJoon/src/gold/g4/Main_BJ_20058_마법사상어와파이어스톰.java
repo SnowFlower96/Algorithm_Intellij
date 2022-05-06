@@ -16,6 +16,7 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
     static int N, Q, size;
     static int[][] arr;
 
+    // 인접한 칸 탐색을 위한 delta 값
     static final int[] dr = {-1, 1, 0, 0};
     static final int[] dc = {0, 0, -1, 1};
 
@@ -23,11 +24,12 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        Q = Integer.parseInt(st.nextToken());
-        size = (int) Math.pow(2, N);
-        arr = new int[size][size];
+        N = Integer.parseInt(st.nextToken());  // 격자의 크기 2^N
+        Q = Integer.parseInt(st.nextToken());  // 시전할 단계의 수
+        size = (int) Math.pow(2, N);  // 2의 N승
+        arr = new int[size][size];  // 얼음판
 
+        // 얼음판의 정보 입력
         for (int i = 0; i < size; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < size; j++) {
@@ -37,16 +39,26 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < Q; i++) {
+            // 입력된 단계에 따라 작업 계산
             work(Integer.parseInt(st.nextToken()));
         }
 
+        // 최종 출력 계산
         getAns();
     }
 
-    private static void work(int l) {
-        int space = (int) Math.pow(2, l);
+    /**
+     * 입력된 단계에 따라 마법 시전
+     * @param L : 단계 L
+     */
+    private static void work(int L) {
+        int space = (int) Math.pow(2, L);  // 격자의 크기
+
+        // 입력학 격자의 크기에 따라 구분하기 위한 2중 for 문
+        // 격자의 크기에 맞게 i는 격자의 크기만큼씩 증가
         for (int i = 0; i < size; i += space) {
             for (int j = 0; j < size; j += space) {
+                // 각 격자마다 회전하는 함수 호출
                 rotate(i, j, space);
             }
         }
@@ -79,16 +91,24 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
         for (int[] point : list) arr[point[0]][point[1]] -= 1;
     }
 
+    /**
+     * 입력받은 격자의 좌상단 좌표 (r, c)와 격자의 크기 space 를 입력받아 격자 회전
+     * @param r : 좌상단 r좌표
+     * @param c : 좌상단 c좌표
+     * @param space : 격자의 크기
+     */
     private static void rotate(int r, int c, int space) {
-        for (int i = 0; i < space / 2; i++) {
-            for (int j = 0; j < space - 1 - (i * 2); j++) {
+        for (int i = 0; i < space / 2; i++) {  // 겉부터 안쪽까지 회전하기 위한 값
+            for (int j = 0; j < space - 1 - (i * 2); j++) {  // 시작부터 끝
                 int nr = r + i;
                 int nc = c + i;
                 int ns = space - 1;
-                int[] lt = {nr, nc + j};
-                int[] rt = {nr + j, nc + ns - (i * 2)};
-                int[] rb = {nr + ns - (i * 2), nc + ns - j - (i * 2)};
-                int[] lb = {nr + ns - j - (i * 2), nc};
+                
+                // 반 시계방향으로 각 원소들 회전
+                int[] lt = {nr, nc + j};  // 좌상단
+                int[] rt = {nr + j, nc + ns - (i * 2)};  // 우상단
+                int[] rb = {nr + ns - (i * 2), nc + ns - j - (i * 2)};  // 우하단
+                int[] lb = {nr + ns - j - (i * 2), nc};  // 좌하단
 
                 int temp = arr[lt[0]][lt[1]];
                 arr[lt[0]][lt[1]] = arr[lb[0]][lb[1]];
@@ -99,6 +119,9 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
         }
     }
 
+    /**
+     * 얼음의 합과 가장 큰 얼음 덩어리의 크기 구하고 출력
+     */
     private static void getAns() {
         int sum = 0;
         int maxCnt = Integer.MIN_VALUE;
@@ -117,11 +140,20 @@ public class Main_BJ_20058_마법사상어와파이어스톰 {
         System.out.println(maxCnt);
     }
 
+    /**
+     * 가장 큰 얼음 덩어리 탐색을 위한 dfs
+     * @param r : 현재 r좌표
+     * @param c : 현재 c좌표
+     * @param visited : 방문체크용 배열
+     * @param cnt : 현재까지 탐색한 얼음덩어리의 크기
+     * @return 탐색한 얼음덩어리의 크기
+     */
     private static int dfs(int r, int c, boolean[][] visited, int cnt) {
         for (int d = 0; d < 4; d++) {
             int nr = r + dr[d];
             int nc = c + dc[d];
 
+            // 경계체크, 방문체크, 얼음 유무 체크
             if (nr < 0 || nr >= size || nc < 0 || nc >= size || visited[nr][nc] || arr[nr][nc] == 0) continue;
 
             visited[nr][nc] = true;
