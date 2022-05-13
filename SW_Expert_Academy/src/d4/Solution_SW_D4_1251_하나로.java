@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Solution_SW_D4_1251_하나로 {
 
-	public static void main(String[] args) throws IOException { 
+	public static voi3d main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_1251.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
