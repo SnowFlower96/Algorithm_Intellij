@@ -13,7 +13,7 @@ public class Main_BJ_1032_명령프롬프트 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        
+
         int N = Integer.parseInt(br.readLine());
         String[] input = new String[N];
         for (int i = 0; i < N; i++) {
@@ -33,7 +33,7 @@ public class Main_BJ_1032_명령프롬프트 {
             }
             sb.append(flag ? c : '?');
         }
-        
+
         System.out.println(sb.toString());
     }
 
