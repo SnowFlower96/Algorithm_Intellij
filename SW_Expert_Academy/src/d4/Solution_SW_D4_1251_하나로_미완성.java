@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D4_1251_하나로 {
+public class Solution_SW_D4_1251_하나로_미완성 {
 
-	public static voi3d main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_1251.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
