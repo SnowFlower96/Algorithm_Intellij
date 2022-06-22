@@ -1,7 +1,5 @@
 package gold.g5;
 
-import silver.s2.Main_BJ_18352_특정거리의도시찾기;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
