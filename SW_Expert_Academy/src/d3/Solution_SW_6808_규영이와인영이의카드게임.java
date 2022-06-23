@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_6808_규영이와인영이의카드게임 {
+public class Solution_SW_6808_규영이와인영이의카드게임 {
 
 	static int[] gyu;  // 규영이 카드
 	static int[] in;  // 인영이 카드

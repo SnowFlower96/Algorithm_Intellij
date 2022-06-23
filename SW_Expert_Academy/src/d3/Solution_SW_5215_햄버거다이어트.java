@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_5215_햄버거다이어트 {
+public class Solution_SW_5215_햄버거다이어트 {
 
 	static int answer;
 	static int N;

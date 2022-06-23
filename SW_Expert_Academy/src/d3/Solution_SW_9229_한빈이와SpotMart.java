@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_9229_한빈이와SpotMart {
+public class Solution_SW_9229_한빈이와SpotMart {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		System.setIn(new FileInputStream("res/input_9229.txt"));

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_3499_퍼펙트셔틀 {
+public class Solution_SW_3499_퍼펙트셔틀 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_3499.txt"));
