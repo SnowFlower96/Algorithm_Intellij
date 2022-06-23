@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Author jhno96
  * @Date 2022. 2. 6.
  */
-public class Solution_SW_D2_1954_달팽이숫자 {
+public class Solution_SW_1954_달팽이숫자 {
 
 	public static void main(String[] args) throws IOException {
 

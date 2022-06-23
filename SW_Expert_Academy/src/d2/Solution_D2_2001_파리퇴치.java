@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * @author jhno96
  * @date 2022. 2. 6.
  */
-public class Solution_SW_D2_2001_파리퇴치 {
+public class Solution_D2_2001_파리퇴치 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		System.setIn(new FileInputStream("res/input_2001.txt"));

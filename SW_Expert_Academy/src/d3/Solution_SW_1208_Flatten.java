@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_1208_Flatten {
+public class Solution_SW_1208_Flatten {
 
 	static int limit;
 	static int diff = Integer.MAX_VALUE;
