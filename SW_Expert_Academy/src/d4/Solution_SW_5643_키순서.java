@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * @author jhno96
  * @date 2022. 4. 6.
  */
-public class Solution_5643_키순서 {
+public class Solution_SW_5643_키순서 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_5643.txt"));
