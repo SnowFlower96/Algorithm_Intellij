@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_1228_암호문1 {
+public class Solution_SW_1228_암호문1 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_1228.txt"));

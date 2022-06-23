@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D4_1210_Ladder1 {
+public class Solution_SW_1210_Ladder1 {
 
 	// 좌, 우, 하
 	static final int[] dr = { 0, 0, 1 };

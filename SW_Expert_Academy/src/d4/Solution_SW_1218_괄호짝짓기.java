@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Solution_SW_D4_1218_괄호짝짓기 {
+public class Solution_SW_1218_괄호짝짓기 {
 
 	//  문자 종류
 	public static final char[] inChar = {'(', '[', '{', '<'};
