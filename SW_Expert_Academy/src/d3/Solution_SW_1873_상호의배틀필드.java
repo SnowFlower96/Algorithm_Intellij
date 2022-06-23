@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_1873_상호의배틀필드 {
+public class Solution_SW_1873_상호의배틀필드 {
 
 	// 맵의 높이, 폭
 	static int height;

@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * @author jhno96
  * @date 2022. 4. 4.
  */
-public class Solution_SW_D3_3307_최장증가부분수열 {
+public class Solution_SW_3307_최장증가부분수열 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream(new File("res/input_3307.txt")));

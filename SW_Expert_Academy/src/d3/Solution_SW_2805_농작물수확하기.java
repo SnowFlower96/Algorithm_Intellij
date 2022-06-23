@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_SW_D3_2805_농작물수확하기 {
+public class Solution_SW_2805_농작물수확하기 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("res/input_2805.txt"));
