@@ -15,6 +15,8 @@ import java.util.StringTokenizer;
  */
 public class Main_BJ_1504_특정한최단경로 {
 
+    static final int INF = 200000000;
+
     static class Node implements Comparable<Node> {
         int to, w;
 
@@ -66,7 +68,7 @@ public class Main_BJ_1504_특정한최단경로 {
         twoToOne += Dijkstra(N, list, V2, V1);
         twoToOne += Dijkstra(N, list, V1, N);
 
-        if (oneToTwo != Integer.MAX_VALUE && twoToOne != Integer.MAX_VALUE)
+        if (oneToTwo <= INF && twoToOne <= INF)
             System.out.println(Math.min(oneToTwo, twoToOne));
         else System.out.println(-1);
     }
@@ -78,7 +80,7 @@ public class Main_BJ_1504_특정한최단경로 {
         int[] dist = new int[N + 1];  // 거리 저장 배열
 
         // 거리 저장 배열 초기화
-        Arrays.fill(dist, Integer.MAX_VALUE);
+        Arrays.fill(dist, INF);
         dist[st] = 0;  // 시작점
 
         pq.offer(new Node(st, 0));
