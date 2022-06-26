@@ -33,8 +33,11 @@ public class Main_BJ_13549_숨바꼭질3 {
         int N = Integer.parseInt(st.nextToken());  // 수빈이의 위치
         int K = Integer.parseInt(st.nextToken());  // 동생의 위치
 
+        // 큐와 방문 체크 배열 선언
         Queue<Point> queue = new LinkedList<>();
         boolean[] visit = new boolean[100001];
+
+        // 시작점 입력
         queue.offer(new Point(N, 0));
         while (!queue.isEmpty()) {
             Point cur = queue.poll();
