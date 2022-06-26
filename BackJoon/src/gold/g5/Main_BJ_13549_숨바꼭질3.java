@@ -3,7 +3,6 @@ package gold.g5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -50,6 +49,7 @@ public class Main_BJ_13549_숨바꼭질3 {
                 return;
             }
 
+            // 방문 체크 확인
             if (visit[idx]) continue;
             visit[idx] = true;
 
