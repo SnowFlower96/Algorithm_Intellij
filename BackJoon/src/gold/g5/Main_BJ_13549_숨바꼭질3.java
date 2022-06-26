@@ -44,6 +44,7 @@ public class Main_BJ_13549_숨바꼭질3 {
             int idx = cur.idx;
             int time = cur.time;
 
+            // 동생의 위치에 도달하면
             if (idx == K) {
                 System.out.println(time);
                 return;
