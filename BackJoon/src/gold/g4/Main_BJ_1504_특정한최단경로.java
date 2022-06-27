@@ -53,7 +53,7 @@ public class Main_BJ_1504_특정한최단경로 {
             list.get(to).add(new Node(from, w));
         }
 
-        // 시작과 도착 입력
+        // 경유해야 하는 두 정점 입력
         st = new StringTokenizer(br.readLine());
         int V1 = Integer.parseInt(st.nextToken());
         int V2 = Integer.parseInt(st.nextToken());
