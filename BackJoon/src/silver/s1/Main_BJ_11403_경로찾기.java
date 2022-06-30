@@ -29,16 +29,18 @@ public class Main_BJ_11403_경로찾기 {
             }
         }
 
-        for (int k = 0; k < N; k++) {
+        // 플로이드 와샬
+        for (int k = 0; k < N; k++) {  // 경유 노드 확인
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                    if (matrix[i][k] == 1 && matrix[k][j] == 1) {
+                    if (matrix[i][k] == 1 && matrix[k][j] == 1) {  // 경유해서 갈 수 있는지 확인
                         matrix[i][j] = 1;
                     }
                 }
             }
         }
 
+        // 결과 출력
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -48,7 +50,6 @@ public class Main_BJ_11403_경로찾기 {
         }
 
         System.out.println(sb.toString().trim());
-
     }
 
 }
