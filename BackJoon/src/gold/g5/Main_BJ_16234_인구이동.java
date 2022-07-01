@@ -20,15 +20,6 @@ public class Main_BJ_16234_인구이동 {
     static class Point {
         int r, c, population;
 
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "r=" + r +
-                    ", c=" + c +
-                    ", population=" + population +
-                    '}';
-        }
-
         public Point(int r, int c, int population) {
             this.r = r;
             this.c = c;
