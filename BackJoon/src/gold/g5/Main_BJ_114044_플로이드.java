@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  */
 public class Main_BJ_114044_플로이드 {
 
-    static final int INF = 999999;
+    static final int INF = 9999999;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
