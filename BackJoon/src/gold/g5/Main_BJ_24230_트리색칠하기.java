@@ -43,11 +43,7 @@ public class Main_BJ_24230_트리색칠하기 {
             list.get(to).add(from);
         }
 
-        if(colors[1] == 0) {
-            ans = 0;
-        } else {
-            ans = 1;
-        }
+        ans = colors[1] == 0 ? 0 : 1;
         DFS(1);
 
         System.out.println(ans);
