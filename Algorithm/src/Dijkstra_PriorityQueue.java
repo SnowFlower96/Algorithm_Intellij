@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class Dijkstra {
+public class Dijkstra_PriorityQueue {
 
     static final int INF = 9999999;
 
@@ -57,20 +57,19 @@ public class Dijkstra {
         dist[st] = 0;                          // 시작 정점은 0으로
         boolean[] visit = new boolean[V + 1];  // 방문 체크 배열
 
-        for (int i = 1; i <= V; i++) {
-            int nodeValue = Integer.MAX_VALUE;
-            int nodeIdx = 0;
-            for (int j = 1; j < V + 1; j++) {
-                if (!visit[j] && dist[j] < nodeValue) {
-                    nodeValue = dist[j];
-                    nodeIdx = j;
-                }
-            }
-            visit[nodeIdx] = true;
+        // 우선 순위 큐 사용
+        PriorityQueue<Node> pq = new PriorityQueue<>();
+        pq.offer(new Node(1, 0));
+        while (!pq.isEmpty()) {
+            Node cur = pq.poll();
 
-            for (Node n : adjList.get(nodeIdx)) {
-                if (dist[n.to] > dist[nodeIdx] + n.w) {
-                    dist[n.to] = dist[nodeIdx] + n.w;
+            if (visit[cur.to]) continue;
+            visit[cur.to] = true;
+
+            for (Node n : adjList.get(cur.to)) {
+                if (!visit[n.to] && dist[n.to] > dist[cur.to] + n.w) {
+                    dist[n.to] = dist[cur.to] + n.w;
+                    pq.offer(n);
                 }
             }
         }
@@ -80,7 +79,7 @@ public class Dijkstra {
         for (int i = 1; i <= V; i++) {
             sb.append(dist[i]).append(" ");
         }
-        System.out.println(sb);
+        System.out.println(sb.toString());
     }
 
 }
