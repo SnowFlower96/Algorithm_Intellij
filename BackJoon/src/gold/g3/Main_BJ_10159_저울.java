@@ -36,7 +36,7 @@ public class Main_BJ_10159_저울 {
                 if (i == k) continue;
                 for (int j = 1; j <= N; j++) {
                     if (i == j || j == k) continue;
-                    if (!map[i][j] && (map[i][k] && map[j][k])) map[i][j] = true;
+                    if (!map[i][j] && (map[i][k] && map[k][j])) map[i][j] = true;
                 }
             }
         }
@@ -47,7 +47,7 @@ public class Main_BJ_10159_저울 {
                 if (i == j) continue;
                 if (!map[i][j]) cnt++;
             }
-            System.out.println(Arrays.toString(map[i]));
+//            System.out.println(Arrays.toString(map[i]));
             System.out.println(cnt);
         }
     }
