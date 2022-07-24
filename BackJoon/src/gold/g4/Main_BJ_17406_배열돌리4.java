@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * Study
+ * @Author : jhno96
+ * @Date : 2022. 07. 24
+ */
 public class Main_BJ_17406_배열돌리4 {
 
     static class RotateInfo {
@@ -66,6 +71,7 @@ public class Main_BJ_17406_배열돌리4 {
         System.out.println(ans);
     }
 
+    // 회전할 경우의 수
     public static void permute(int cnt) {
         if (cnt == K) {
             ans = Math.min(ans, rotateArr());
@@ -82,6 +88,7 @@ public class Main_BJ_17406_배열돌리4 {
         }
     }
 
+    // 주어진 순서대로 배열 회전
     public static int rotateArr() {
         int[][] copy = new int[N][M];
         for (int i = 0; i < N; i++) {
@@ -119,6 +126,7 @@ public class Main_BJ_17406_배열돌리4 {
         return getArrValue(copy);
     }
 
+    // 배열 값(행의 합 중에서 가장 작은 합) 구하기
     public static int getArrValue(int[][] arr) {
 
         int result = Integer.MAX_VALUE;
