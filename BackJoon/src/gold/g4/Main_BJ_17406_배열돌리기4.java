@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * @Author : jhno96
  * @Date : 2022. 07. 24
  */
-public class Main_BJ_17406_배열돌리4 {
+public class Main_BJ_17406_배열돌리기4 {
 
     static class RotateInfo {
         int sr, sc, er, ec, s;
@@ -128,7 +128,6 @@ public class Main_BJ_17406_배열돌리4 {
 
     // 배열 값(행의 합 중에서 가장 작은 합) 구하기
     public static int getArrValue(int[][] arr) {
-
         int result = Integer.MAX_VALUE;
         for (int[] row : arr) {
             int sum = 0;
