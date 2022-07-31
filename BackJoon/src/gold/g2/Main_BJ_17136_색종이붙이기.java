@@ -68,7 +68,7 @@ public class Main_BJ_17136_색종이붙이기 {
         for (int i = r; i < r + size; i++) {
             for (int j = c; j < c + size; j++) {
                 // 경계를 벗어나면
-                if (i < 0 || i >= 10 || j < 0 || j >= 10) return false;
+                if (i >= 10 || j >= 10) return false;
                 // 해당 칸에 색종이를 붙일 수 없으면
                 if (!map[i][j]) return false;
             }
